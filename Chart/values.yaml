@@ -1,0 +1,12 @@
+Name: demo
+Component: demo-server
+ServerVersion: 1.1.0
+Replicas: 2
+CpuRequests: "25m"
+MemoryRequests: "64Mi"
+CpuLimits: "100m"
+MemoryLimits: "64Mi"
+Image:
+  Name: kuberlab/demo-web-server
+  Tag: latest
+  Current: latest

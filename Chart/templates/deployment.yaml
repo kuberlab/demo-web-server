@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "{{ printf "%s-%s" .Release.Name .Values.Name | trunc 24 }}"
+  labels:
+    heritage: {{.Release.Service | quote }}
+    release: {{.Release.Name | quote }}
+    chart: "{{.Chart.Name}}-{{.Chart.Version}}"
+    component: "{{.Release.Name}}-{{.Values.Component}}"
+  annotations:
+    helm.sh/created: {{.Release.Time.Seconds | quote }}
+spec:
+  replicas: {{default 1 .Values.Replicas }}
+  template:
+    metadata:
+      labels:
+        heritage: {{.Release.Service | quote }}
+        release: {{.Release.Name | quote }}
+        chart: "{{.Chart.Name}}-{{.Chart.Version}}"
+        component: "{{.Release.Name}}-{{.Values.Component}}"
+    spec:
+      containers:
+      - name: demo-web-server
+        env:
+        - name: SERVER_VERSION
+          value: "{{.Values.ServerVersion}}"
+        resources:
+          requests:
+            cpu: "{{.Values.CpuRequests}}"
+            memory: "{{.Values.MemoryRequests}}"
+          limits:
+            cpu: "{{.Values.CpuLimits}}"
+            memory: "{{.Values.MemoryLimits}}"
+        image: "{{ printf "%s:%s" .Values.Image.Name .Values.Image.Current}}"
+        ports:
+        - containerPort: 9200
+          name: http
+        - containerPort: 9300
+          name: transport

@@ -1,0 +1,13 @@
+name: demo-web-server
+home: https://github.com/kuberlab/demo-web-server
+version: 1.0.0
+description: Kuberlab Workflow demo
+sources:
+  - https://github.com/kuberlab/demo-web-server
+maintainers:
+  - name: kuberlab
+keywords:
+  - www
+  - go
+  - demo
+icon: https://static.apkupdate.com/images/cover/jp.ubi.common.http.server.png
