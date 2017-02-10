@@ -1,6 +1,6 @@
 Name: demo
 Component: demo-server
-ServerVersion: 1.1.0
+ServerVersion: 1.1.1
 Replicas: 2
 CpuRequests: "25m"
 MemoryRequests: "64Mi"
