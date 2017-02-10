@@ -22,6 +22,10 @@ spec:
       containers:
       - name: demo-web-server
         env:
+        - name: VNAME
+          value: "{{.Values.Name}}"
+        - name: VRELEASE
+          value: "{{.Release.Name}}"
         - name: SERVER_VERSION
           value: "{{.Values.ServerVersion}}"
         resources:
