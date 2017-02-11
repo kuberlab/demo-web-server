@@ -9,4 +9,3 @@ MemoryLimits: "64Mi"
 Image:
   Name: kuberlab/demo-web-server
   Tag: latest
-  Current: latest

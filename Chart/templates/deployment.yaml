@@ -35,7 +35,7 @@ spec:
           limits:
             cpu: "{{.Values.CpuLimits}}"
             memory: "{{.Values.MemoryLimits}}"
-        image: "{{ printf "%s:%s" .Values.Image.Name .Values.Image.Current}}"
+        image: "{{ printf "%s:%s" .Values.Image.Name .Values.Image.Tag}}"
         ports:
         - containerPort: 9200
           name: http
