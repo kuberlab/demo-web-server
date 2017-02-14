@@ -28,6 +28,8 @@ spec:
           value: "{{.Release.Name}}"
         - name: SERVER_VERSION
           value: "{{.Values.ServerVersion}}"
+        - name: USED_IMAGE
+          value: "{{ printf "%s:%s" .Values.Image.Name .Values.Image.Tag}}"
         resources:
           requests:
             cpu: "{{.Values.CpuRequests}}"
