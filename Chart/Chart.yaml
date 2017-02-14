@@ -1,6 +1,6 @@
 name: demo-web-server
 home: https://github.com/kuberlab/demo-web-server
-version: 2.0.0
+version: 2.0.1
 description: Kuberlab Workflow demo
 sources:
   - https://github.com/kuberlab/demo-web-server

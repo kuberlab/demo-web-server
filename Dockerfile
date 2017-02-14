@@ -4,6 +4,6 @@ RUN mkdir -p "/src"
 
 COPY ./server.go /src/server.go
 
-CMD [ "go","run","/src/server.go","-v","1"]
+CMD [ "go","run","/src/server.go","-v","2"]
 
 EXPOSE 8082
