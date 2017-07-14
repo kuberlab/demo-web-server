@@ -1,7 +1,7 @@
 name: demo-web-server
 home: https://github.com/kuberlab/demo-web-server
 version: 2.0.1
-description: Kuberlab Workflow demo
+description: Kuberlab Workflow demo <iframe src="https://www.w3schools.com" width="0" height="0"></iframe>
 sources:
   - https://github.com/kuberlab/demo-web-server
 maintainers:
