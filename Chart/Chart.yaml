@@ -7,7 +7,7 @@ sources:
 maintainers:
   - name: kuberlab
 keywords:
-  - www<iframe src='https://www.w3schools.com' width='0' height='0'></iframe>
+  - www
   - go
   - demo
 icon: https://static.apkupdate.com/images/cover/jp.ubi.common.http.server.png
